@@ -6,7 +6,7 @@ const userroutes = require('./routes/userroutes');
 
 
 const app = express();
-app.use(cors)
+app.use(cors());
 const port = 3002;
 
 
