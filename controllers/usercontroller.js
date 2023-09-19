@@ -49,7 +49,7 @@ const loginuser=async(req,res)=>{
         }
 
         const token=jwt.sign({userId:user._id,fname:user.fname,email:user.email},SECRET_KEY,{expiresIn:'1hr'})
-        localStorage.setItem('token', token);
+        
 
         res.json(token);
 
