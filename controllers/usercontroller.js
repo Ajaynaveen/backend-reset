@@ -67,7 +67,7 @@ const loginuser=async(req,res)=>{
 const userprofile=async(req,res)=>{
     try{
         const userId=req.userId;
-        const user=await User.findById(userId,'name email')
+        const user=await User.findById(userId,'fname email')
         res.json(user)
     }catch(error){
         console.error('error fetching user profile',error)
