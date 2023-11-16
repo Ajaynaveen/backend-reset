@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const userroutes = require('./routes/userroutes');
 
 
+
+
 const app = express();
 app.use(cors());
 const port = 3002;
@@ -25,6 +27,7 @@ db.on('error', console.error.bind(console, 'Connection error'));
 app.use(express.json());
 
 app.use('/', userroutes);
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
