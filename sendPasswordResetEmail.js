@@ -15,8 +15,9 @@ const sendPasswordResetEmail = (toEmail, resetToken) => {
     from: 'ajay.s.naviee@gmail.com', // Your Gmail email address
     to: toEmail, // Recipient's email address
     subject: 'Password Reset',
-    html: `<p>Click the following link to reset your password: <a href="https://passwordreset-0t0v.onrender.com/reset-password/${resetToken}">Reset Password</a></p>`,
+    html: `<p>Click the following link to reset your password: <a href="http://localhost:3000//reset-password/${resetToken}">Reset Password</a></p>`,
   };
+
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
